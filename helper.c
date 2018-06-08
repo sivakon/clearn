@@ -1,6 +1,11 @@
-#include <stdio.h>
 #include "helper.h"
 
-void helper() {
+void helper() 
+{
     puts("helper");
+}
+
+int addition(int a, int b)
+{
+    return a + b;
 }

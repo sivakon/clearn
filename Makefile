@@ -19,8 +19,9 @@ clean:
 	rm -rf target *.a ./a.out *.dylib
 
 # this is important for creating a shared library
+# no need to specify main function while creating a shared library
 shared:
-	$(CC) $(CFLAGS) -shared -fpic helper.c main.c -o libhelper.dylib
+	$(CC) $(CFLAGS) -shared -fPIC helper.c -o libhelper.dylib
 
 shared_run:
 	$(CC) $(CFLAGS) main.c libhelper.dylib
@@ -31,3 +32,6 @@ shared_run:
 # Compile using -lhelper
 another_way:
 	$(CC) $(CFLAGS) main.c -lhelper -L/Users/sivaram.konanki/Documents/c/SharedLibraryTutorial -I/Users/sivaram.konanki/Documents/c/SharedLibraryTutorial
+
+intel:
+	cc -march=haswell main.c
