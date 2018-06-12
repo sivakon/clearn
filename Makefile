@@ -16,7 +16,7 @@ archive:
 	ar -rv libhelper.a target/helper.o target/main.o
 
 clean:
-	rm -rf target *.a ./a.out *.dylib
+	rm -rf target *.a ./a.out *.dylib *.o
 
 # this is important for creating a shared library
 # no need to specify main function while creating a shared library
@@ -35,3 +35,7 @@ another_way:
 
 intel:
 	cc -march=haswell main.c
+
+betterc:
+	rm ./ex_betterc
+	ldc2 -betterC ex_betterc.d && ./ex_betterc
