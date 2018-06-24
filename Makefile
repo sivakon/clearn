@@ -39,3 +39,10 @@ intel:
 betterc:
 	rm ./ex_betterc
 	ldc2 -betterC ex_betterc.d && ./ex_betterc
+
+dex:
+	ldc2 -betterC -shared ex_betterc.d
+	ldc2 primes_main.d libex_betterc.dylib
+
+wren:
+	cc -lwren wren_embed.c
