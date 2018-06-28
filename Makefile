@@ -16,7 +16,7 @@ archive:
 	ar -rv libhelper.a target/helper.o target/main.o
 
 clean:
-	rm -rf target *.a ./a.out *.dylib *.o
+	rm -rf target *.a ./a.out *.dylib *.o blas_example
 
 # this is important for creating a shared library
 # no need to specify main function while creating a shared library
@@ -46,3 +46,6 @@ dex:
 
 wren:
 	cc -lwren wren_embed.c
+
+blas:
+	cc -o blas_example blas_example.c -I/usr/local/opt/openblas/include -L/usr/local/opt/openblas/lib -lopenblas
