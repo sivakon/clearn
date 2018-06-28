@@ -48,4 +48,4 @@ wren:
 	cc -lwren wren_embed.c
 
 blas:
-	cc -o blas_example blas_example.c -I/usr/local/opt/openblas/include -L/usr/local/opt/openblas/lib -lopenblas
+	cc -o blas_example blas_example.c -I/usr/local/opt/openblas/include -L/usr/local/opt/openblas/lib -lopenblas -lpthread
