@@ -13,3 +13,6 @@ TODO: Compile all C learning and links for understanding language
 
 Embedding tutorial
 [wren embedding](http://nelari.us/post/wren-embedding-1/)
+
+Using OpenMPI
+`gcc-8 -fopenmp hello_openmp.c`
